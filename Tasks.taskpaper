@@ -1,0 +1,8 @@
+TODO:
+	- Promise
+	- Async and Await
+	- Streams, pull/push signal
+
+There are too many codes in the slides. It's a problem. It's not easy for audience to follow, and more importantly it's still too boring.
+
+I need to read others options about asynchronous programming for Swift.
