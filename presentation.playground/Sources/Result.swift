@@ -11,7 +11,6 @@ public enum Result<Value, Error: ErrorType> {
     public init(error: Error) {
         self = .Failure(error)
     }
-    
 }
 
 public extension Result {
@@ -106,3 +105,5 @@ extension Result: CustomDebugStringConvertible {
         )
     }
 }
+
+public enum IgnoreError: ErrorType { }
