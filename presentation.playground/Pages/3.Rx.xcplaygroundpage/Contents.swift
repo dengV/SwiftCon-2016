@@ -162,6 +162,27 @@ signal.sendNext("test")
 //: [Bond](https://github.com/SwiftBond/Bond)
 //: [VinceRP](https://github.com/bvic23/VinceRP)
 
+//: # Reactive
+//: Good:
+//: - No more callback hell
+//: - Declaration: code is easy to read and maintain
+//: - There is a defined way how errors should be handled
+//: - If subscribe once, callback will be called once only
+//: - Synchronization is not painful
+//: Bad:
+//: - Do not know on which queue that a callback will be called
+
+//: RxSwift: `observeOn(MainScheduler.instance)`
+//: ReactiveCocoa: `observeOn(UIScheduler())`
+
+//: # Reactive
+//: - No more callback hell
+//: - Declaration: code is easy to read and maintain
+//: - There is a defined way how errors should be handled
+//: - If subscribe once, callback will be called once only
+//: - Synchronization is not painful
+//: - Can schedule on which queue that a callback will be called
+
 //: # References
 //: - [Push vs Pull Signal](http://www.fantageek.com/blog/2016/01/03/push-vs-pull-signal/)
 //: - [ReactiveX](http://reactivex.io)
