@@ -109,6 +109,10 @@ dispatch_barrier_async(concurrentQueue) {
 //: - Bart Jacobs's [Choosing Between NSOperation and Grand Central Dispatch](http://bartjacobs.com/choosing-between-nsoperation-and-grand-central-dispatch/)
 //: - Marcus Zarra's [A Modern Network Operation](http://www.cimgf.com/2016/01/28/a-modern-network-operation/)
 
+//: # Futures (a.k.a Promises)
+
+
+
 //: # 谢谢
 //: ### Thank You
 
