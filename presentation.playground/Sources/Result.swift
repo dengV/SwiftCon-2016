@@ -86,16 +86,6 @@ public extension Result {
     }
 }
 
-// MARK: CustomStringConvertible
-extension Result: CustomStringConvertible {
-    public var description: String {
-        return evaluate(
-            ifSuccess: { value in "Success: \(value)" },
-            ifFailure: { error in "Error: \(error)" }
-        )
-    }
-}
-
 // MARK: CustomDebugStringConvertible
 extension Result: CustomDebugStringConvertible {
     public var debugDescription: String {
