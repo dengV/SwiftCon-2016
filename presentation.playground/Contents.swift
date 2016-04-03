@@ -216,7 +216,22 @@ func getAvatar() -> Future<String, IgnoreError> {
 //
 //XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
+//: ```
+//: func getAvatar() -> async String
+//: ```
 
+//: # Asyn - Await
+
+//: ```
+//: func getAvatar() -> async String
+//:
+//: do {
+//:     let image = await getAvatar()
+//:     // Do something with the image
+//: } catch {
+//:     // Handle error
+//: }
+//: ```
 
 //: # 谢谢
 //: ### Thank You
