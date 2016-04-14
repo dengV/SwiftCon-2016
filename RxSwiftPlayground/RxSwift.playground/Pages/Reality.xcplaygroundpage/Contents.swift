@@ -158,6 +158,24 @@ dispatch_barrier_async(concurrentQueue) {
  ---
  
  # There are good practicals.
+ 
+ ---
+ 
+ Use examples from [Comparing Reactive and Traditional](http://inessential.com/2016/04/08/comparing_reactive_and_traditional)
+ 
+ - Changes to the search text must be coalesced over a period of 0.3 seconds.
+ - When the search text changes, and the text has four or more characters, an http call is made, and the previous http call (if there is one) must be canceled.
+ - When the http call returns, the table is updated.
+ - And: there’s also a Refresh button that triggers an http call right away.
+ 
+ ---
+ 
+ [Comparing Reactive and Traditional](http://inessential.com/2016/04/08/comparing_reactive_and_traditional)中的例子
+ 
+ - 0.3秒内搜索词多次变化，只有最后一次会触发请求
+ - 当搜索词发生变化时，如果文字长度4个以上，发起新的请求，前一个请求需要被取消
+ - 请求返回，界面需要刷新
+ - 有一个刷新button，点机会立即发起请求
  */
 
 //: [Next](@next) | [Introduction](Introduction)
