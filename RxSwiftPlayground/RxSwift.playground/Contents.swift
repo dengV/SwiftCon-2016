@@ -1,5 +1,7 @@
-import UIKit
+//: Please build the scheme 'RxSwiftPlayground' first
 import XCPlayground
+import RxSwift
+import RxCocoa
 
 //: # Asynchronous Programming in Swift
 //: # 异步
@@ -22,7 +24,7 @@ import XCPlayground
 //: # 活在当下
 //: ### Live in the present
 
-//: ### I know 
+//: ### I know
 //: # Grand Central Dispatch
 //: ### GCD for short, A low-level C API
 
@@ -84,29 +86,3 @@ dispatch_barrier_async(concurrentQueue) {
 //: # Asynchronous Programming is *NOT* easy
 //: ## *不简单*
 
-
-
-//: # How errors should be handled in asynchronous scenarios?
-//: - No guarantee that an asynchronous function always calls a callback
-//: - No guarantee that an asynchronous function only calls a callback once
-//: - Do not know on which queue that a callback will be called
-
-//: # Asynchronous Programming with GCD is *NOT* easy.
-
-//: # `NSOperation` and `NSOperationQueue`
-//: ### An Objective-C API on top of Grand Central Dispatch
-//: - 依赖 Dependencies
-//: - 状态监控 Observe the state using KVO
-//: - 控制 More Controls, for example, `maxConcurrentOperationCount`
-
-//: # 一样不简单
-//: ### But, creating an `NSOperation` subclass is not trivial.
-//: You have to take control of the life-cycle of the `NSOperation`.
-//: - Checking `cancelled`
-//: - Sometimes, taking care of `finished`
-
-//: # References
-//: - Bart Jacobs's [Choosing Between NSOperation and Grand Central Dispatch](http://bartjacobs.com/choosing-between-nsoperation-and-grand-central-dispatch/)
-//: - Marcus Zarra's [A Modern Network Operation](http://www.cimgf.com/2016/01/28/a-modern-network-operation/)
-
-//: [Next](@next)

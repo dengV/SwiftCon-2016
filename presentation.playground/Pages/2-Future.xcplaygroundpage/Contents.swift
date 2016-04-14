@@ -119,7 +119,7 @@ func getAvatar() -> Future<String, IgnoreError> {
 //: # Asyn - Await
 
 //: ```
-//: func getAvatar() -> async String
+//: func getAvatar() -> async UIImage
 //:
 //: do {
 //:     let image = await getAvatar()
