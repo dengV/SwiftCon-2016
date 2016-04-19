@@ -38,7 +38,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
             }
             self.results = titles
         }
-        switcher.switchTo(fetcher)
+        switcher.latest = fetcher
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {

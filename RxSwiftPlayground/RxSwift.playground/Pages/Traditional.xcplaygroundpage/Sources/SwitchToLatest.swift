@@ -9,16 +9,13 @@ public protocol Cancelable {
 }
 
 public class SwitchToLatest {
-    private var latest: Cancelable?
+    public var latest: Cancelable? {
+        willSet {
+            latest?.cancel()
+        }
+    }
     
     public init() { }
-    
-    public func switchTo(next: Cancelable) {
-        if let latest = self.latest {
-            latest.cancel()
-        }
-        latest = next
-    }
     
     deinit {
         latest?.cancel()
