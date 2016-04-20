@@ -7,15 +7,15 @@ import Foundation
 public class Throttle<T> {
     let timeout: Double
     let callback: T -> Void
-    let condition: T -> Bool
+    
+    public var condition: (T -> Bool)?
     
     var value: T?
     var timer: NSTimer?
     
-    public init(timeout: Double, callback: T -> Void, condition: T -> Bool = { _ in true}) {
+    public init(timeout: Double, callback: T -> Void) {
         self.timeout = timeout
         self.callback = callback
-        self.condition = condition
     }
     
     deinit {
@@ -38,7 +38,7 @@ public class Throttle<T> {
         
         value = newValue
         
-        if condition(newValue) {
+        if let condition = condition where condition(newValue) {
             resetTimer()
         }
     }

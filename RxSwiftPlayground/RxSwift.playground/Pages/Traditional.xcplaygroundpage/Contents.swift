@@ -11,17 +11,16 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     }
     
     let searchBar = UISearchBar()
-    lazy var refreshButton: UIBarButtonItem = {
-       return UIBarButtonItem(title: "Refresh", style: .Plain, target: self, action: #selector(ViewController.refreshDidTap))
-    }()
     
     // Live code begin
     let switcher = SwitchToLatest()
-    lazy var throttle: Throttle<String> = Throttle(timeout: 0.3, callback: { query in
-        self.runFetch(query)
-        }) { query in
+    lazy var throttle: Throttle<String> = {
+        let throttle = Throttle(timeout: 0.3, callback: self.runFetch)
+        throttle.condition = { query in
             query.characters.count > 3
-    }
+        }
+        return throttle
+    }()
     
     var currentText = "" {
         didSet {
@@ -68,7 +67,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     
     func setupView() {
         navigationItem.titleView = searchBar
-        navigationItem.rightBarButtonItem = refreshButton
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Refresh", style: .Plain, target: self, action: #selector(ViewController.refreshDidTap))
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         searchBar.delegate = self;
     }
