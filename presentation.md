@@ -24,9 +24,14 @@
 # Schedule
 
 1. 现实中 Reality
-2. 传统式 Traditional
-3. 响应式 Reactive
+2. Demo
+3. 传统式 Traditional / 响应式 Reactive
 4. 近未来 The Future
+
+---
+
+# 现实中 
+### Reality
 
 ---
 
@@ -35,16 +40,6 @@
 > Swift 3.0 relies entirely on platform concurrency primitives (libdispatch, Foundation, pthreads, etc.) for concurrency. Language support for concurrency is an often-requested and potentially high-value feature, but is too large to be in scope for Swift 3.0.
  
 [Swift Thread Safety](https://github.com/apple/swift/blob/master/docs/proposals/Concurrency.rst)
-
----
-
-# 活在当下
-### Live in the present
-
----
-
-# 自生自灭
-### We are on our own
 
 ---
 
@@ -193,6 +188,11 @@ enum Result<T> {
 - Brent Simmons
 
 ---
+
+# 第三方
+### 3rd Party Frameworks
+
+---
  
 # [BrightFuture](https://github.com/Thomvis/BrightFutures)
 ### Futures / Promises
@@ -206,6 +206,14 @@ enum Result<T> {
 1. [Bond](https://github.com/SwiftBond/Bond)
 1. [VinceRP](https://github.com/bvic23/VinceRP)
 1. [Interstellar](https://github.com/JensRavens/Interstellar)
+
+---
+
+# 异步编程难
+
+- 同步难
+- 错误处理难
+- 状态管理难
 
 ---
 
@@ -223,6 +231,11 @@ enum Result<T> {
 ---
 
 # Demo
+
+---
+
+# 近未来
+### The Future
 
 ---
 
