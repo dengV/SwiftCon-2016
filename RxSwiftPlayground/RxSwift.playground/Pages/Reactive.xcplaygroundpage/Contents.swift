@@ -36,7 +36,11 @@ struct Fetcher {
 }
 
 class ViewController: UITableViewController {
-    var results = [String]()
+    var results = [String]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     let disposeBag = DisposeBag()
     
@@ -63,7 +67,6 @@ class ViewController: UITableViewController {
         }.observeOn(MainScheduler.instance)
         .subscribeNext { [weak self] titles in
             self?.results = titles
-            self?.tableView.reloadData()
         }.addDisposableTo(disposeBag)
         
         // Live code end
