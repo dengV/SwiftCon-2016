@@ -24,7 +24,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     
     var currentText = "" {
         didSet {
-            throttle.update(currentText, isEqual: ==)
+            throttle.update(currentText, ignore: ==)
         }
     }
     

@@ -28,9 +28,9 @@ public class Throttle<T> {
         value = nil
     }
     
-    public func update(newValue: T, isEqual: (T, T) -> Bool = { _,_ in false }) {
+    public func update(newValue: T, ignore: (T, T) -> Bool = { _,_ in false }) {
         // distinctUntilChanged
-        if let oldValue = value where isEqual(oldValue, newValue) {
+        if let oldValue = value where ignore(oldValue, newValue) {
             return
         }
         
