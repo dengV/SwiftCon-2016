@@ -17,6 +17,10 @@
 
 ---
 
+[http://www.meetup.com/CocoaHeads-Shanghai/](http://www.meetup.com/CocoaHeads-Shanghai/)
+
+---
+
 # Schedule
 
 1. 现实中 Reality
