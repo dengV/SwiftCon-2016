@@ -5,12 +5,15 @@
 
 ---
 
-# Guanshan Liu (刘冠杉)
+# About Me
 
+- 刘冠杉 Guanshan Liu
 - Senior iOS Developer at Alibaba Music
 - Twitter:  [@guanshanliu](https://twitter.com/guanshanliu)
-- Blog: [https://guanshanliu.typed.com](http://guanshanliu.typed.com)
+- Medium: [@guanshanliu](https://medium.com/@guanshanliu/)
 - Organizer of [CocoaHeads Shanghai Meetup](http://www.meetup.com/CocoaHeads-Shanghai/)
+
+![right 30%](Resources for Slides/qrcode.jpg)
 
 ---
 
@@ -218,7 +221,23 @@ enum Result<T> {
 # Demo
 
 ---
+
+# Asyn - Await
  
+```swift
+func getAvatar() -> async UIImage
+do {
+   let image = await getAvatar()
+   // Do something with the image
+} catch {
+   // Handle error
+}
+// Or
+imageView.image <~ getAvatar()
+```
+ 
+---
+
 # 谢谢
 ### Thank You
  

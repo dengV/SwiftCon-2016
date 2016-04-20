@@ -14,6 +14,7 @@ import Foundation
  } catch {
     // Handle error
  }
+ imageView.image <~ getAvatar()
  ```
  
  ---
