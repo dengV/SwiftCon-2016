@@ -13,7 +13,6 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     let searchBar = UISearchBar()
     
     // Live code begin
-    let switcher = SwitchToLatest()
     lazy var throttle: Throttle<String> = {
         let throttle = Throttle(timeout: 0.3, callback: self.runFetch)
         throttle.condition = { query in
@@ -22,6 +21,12 @@ class ViewController: UITableViewController, UISearchBarDelegate {
         return throttle
     }()
     
+    var fetcher: Fetcher? {
+        willSet {
+            fetcher?.cancel()
+        }
+    }
+    
     var currentText = "" {
         didSet {
             throttle.update(currentText, ignore: ==)
@@ -29,7 +34,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func runFetch(query: String) {
-        let fetcher = Fetcher(query: query) { result, error in
+        fetcher = Fetcher(query: query) { result, error in
             guard error == nil,
                 let titles = result
                 else {
@@ -37,7 +42,6 @@ class ViewController: UITableViewController, UISearchBarDelegate {
             }
             self.results = titles
         }
-        switcher.latest = fetcher
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {

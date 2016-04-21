@@ -32,5 +32,3 @@ public class Fetcher {
         task.cancel()
     }
 }
-
-extension Fetcher: Cancelable { }

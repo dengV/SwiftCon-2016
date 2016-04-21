@@ -255,6 +255,10 @@ imageView.image <~ getAvatar()
  
 ---
 
+# [fit] 讲义 Slides + 例子 demo are on [GitHub](https://github.com/GuanshanLiu/SwiftCon-2016)
+
+---
+
 # 谢谢
 ### Thank You
  
