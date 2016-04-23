@@ -34,13 +34,13 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func runFetch(query: String) {
-        fetcher = Fetcher(query: query) { result, error in
+        fetcher = Fetcher(query: query) { [weak self] result, error in
             guard error == nil,
                 let titles = result
                 else {
                     return
             }
-            self.results = titles
+            self?.results = titles
         }
     }
     
